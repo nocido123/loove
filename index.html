@@ -47,6 +47,11 @@
       max-width: 100%;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 2s ease;
+    }
+    .message.show img {
+      opacity: 1;
     }
     .reveal-btn {
       margin-top: 30px;
@@ -80,8 +85,8 @@
     I don’t know how I got so lucky to find someone who sees the world—and me—the way you do.  
     To me, you’re absolutely perfect. 💕
     
-    <!-- Your uploaded photo -->
-    <img src="C:\Users\nocid\OneDrive\Pictures\Camera Roll\love-photo.jpeg" alt="love photo">
+    <!-- Dropbox photo -->
+    <img src="https://www.dropbox.com/scl/fi/q23r23f6qi3bks2f6bswu/love-photo.jpeg?rlkey=uus9log4nr52csbtsx8uxhfb3&st=ozkj7p9b&dl=1" alt="Valentine Photo">
   </div>
 
   <!-- Background Music -->
@@ -99,6 +104,7 @@
     const message = document.querySelector('.message');
     revealBtn.addEventListener('click', () => {
       message.style.display = 'block';
+      message.classList.add('show');
       revealBtn.style.display = 'none';
     });
 
